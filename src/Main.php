@@ -24,5 +24,6 @@ class Main
         $RouterActive = new RouteActive($ServerRequest, $Router);
         $response = new Response(200);
         $MiddlewareDispatcher = new MiddlewareDispatcher($RouterActive->getMiddleware(), $ServerRequest, $response);
+	    $MiddlewareDispatcher->dispatch();
     }
 }
