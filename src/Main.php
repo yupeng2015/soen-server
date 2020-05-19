@@ -14,6 +14,10 @@ use Soen\Router\Router;
 
 class Main
 {
+    public function __construct(array $config)
+    {
+    }
+
     public function run(){
         $method = $_SERVER['REQUEST_METHOD'];
         $uri = $_SERVER['REQUEST_URI'];
@@ -26,4 +30,9 @@ class Main
         $MiddlewareDispatcher = new MiddlewareDispatcher($RouterActive->getMiddleware(), $ServerRequest, $response);
 	    $MiddlewareDispatcher->dispatch();
     }
+
+    public function start(){
+        
+    }
+
 }
