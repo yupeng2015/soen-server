@@ -16,7 +16,7 @@ class Server implements ServerInterface
         $this->server->up();
     }
 
-    function dowm()
+    function down()
     {
         $this->server->down();
     }
